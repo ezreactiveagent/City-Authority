@@ -92,6 +92,8 @@ The design direction exists, but implementation needs numeric tuning.
 - Response-time penalties
 - Cross-station exposure
 
+**First-pass defaults proposed in [09 — Service Coverage and Response Model](09_Service_Coverage_and_Response_Model.md).** Vehicle range and region-specific band variation remain open (see Report 09 §8).
+
 ### Education
 
 - School capacity penalties above 80%
@@ -216,6 +218,8 @@ Choose the minimum playable city containing:
 - Newspaper coverage
 - One developer dispute
 - A complete failure and accountability report
+
+**Resolved in [08 — Vertical Slice Specification](08_Vertical_Slice_Specification.md).**
 
 ## 6. Recommended Next Question
 
