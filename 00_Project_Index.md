@@ -36,6 +36,14 @@ Covers the hybrid deterministic simulation and LLM design, restricted outcome ge
 
 Lists deferred systems, unresolved implementation questions, later-game ideas, and suggested topics for the next design sessions.
 
+### [08 — Vertical Slice Specification](08_Vertical_Slice_Specification.md)
+
+Defines the minimum playable city — one region, one Mayor, five departments, one emergency, one court case, one media outlet, one developer dispute, and a complete accountability report — as a concrete build target, with explicit scope boundaries and a suggested build order.
+
+### [09 — Service Coverage and Response Model](09_Service_Coverage_and_Response_Model.md)
+
+Proposes first-pass numeric defaults for travel-time bands, coverage-state resolution, response-time severity multipliers, and cross-station exposure, scoped to unblock the vertical slice's emergency system.
+
 ## Current Design Pillars
 
 1. **The player manages rather than directly controls everything.**
@@ -48,7 +56,7 @@ Lists deferred systems, unresolved implementation questions, later-game ideas, a
 
 ## Suggested Review Order
 
-For a complete pass, read Reports 01 through 07 in order.
+For a complete pass, read Reports 01 through 09 in order.
 
 For targeted development:
 
@@ -56,3 +64,4 @@ For targeted development:
 - Start with **Report 03** for the operational city-management gameplay loop.
 - Start with **Report 06** for technical architecture and AI boundaries.
 - Start with **Report 07** before resuming the one-question design process.
+- Start with **Report 08** to see what should actually get built first.
