@@ -44,6 +44,10 @@ Defines the minimum playable city — one region, one Mayor, five departments, o
 
 Proposes first-pass numeric defaults for travel-time bands, coverage-state resolution, response-time severity multipliers, and cross-station exposure, scoped to unblock the vertical slice's emergency system.
 
+### [10 — Vertical Slice Data Defaults](10_Vertical_Slice_Data_Defaults.md)
+
+Fixes the remaining vertical-slice numeric gaps — developer interest penalty/recovery and the court penalty range for the emergency condemnation dispute — and supplies the concrete department roster and region-preset data needed to start building.
+
 ## Current Design Pillars
 
 1. **The player manages rather than directly controls everything.**
@@ -56,7 +60,7 @@ Proposes first-pass numeric defaults for travel-time bands, coverage-state resol
 
 ## Suggested Review Order
 
-For a complete pass, read Reports 01 through 09 in order.
+For a complete pass, read Reports 01 through 10 in order.
 
 For targeted development:
 
@@ -65,3 +69,4 @@ For targeted development:
 - Start with **Report 06** for technical architecture and AI boundaries.
 - Start with **Report 07** before resuming the one-question design process.
 - Start with **Report 08** to see what should actually get built first.
+- Start with **Report 10** for the concrete numbers and data needed to begin Report 08's build order.

@@ -122,6 +122,15 @@ The design direction exists, but implementation needs numeric tuning.
 - Probability of improved offers
 - Media-specific rejection suspicion
 
+**Rejection penalty and recovery speed given placeholder defaults in [10 — Vertical Slice Data Defaults](10_Vertical_Slice_Data_Defaults.md).** Incentive strength, hard-mode timer reset, probability of improved offers, and media-specific rejection suspicion remain open (see Report 10 §6).
+
+### Court Outcomes
+
+- Penalty range for the emergency condemnation / demolition payment dispute
+- Penalty ranges for other case types (criminal, zoning disputes, city lawsuits, liability claims)
+
+**A placeholder penalty range for the emergency condemnation dispute is proposed in [10 — Vertical Slice Data Defaults](10_Vertical_Slice_Data_Defaults.md).** Other case types remain open (see Report 10 §6).
+
 ### Media Reach
 
 - Newspaper spread speed

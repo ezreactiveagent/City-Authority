@@ -91,8 +91,10 @@ No Emergency Management Department, Incident Commander, dispatch/coordination st
 Building the slice will force early answers on a subset of [07 §4](07_Open_Decisions_and_Expansion_Backlog.md):
 
 - **Service Coverage** — required immediately, since the one emergency's bottleneck and coverage effect depend on it. See [09 — Service Coverage and Response Model](09_Service_Coverage_and_Response_Model.md) for a first-pass numeric model.
-- **Developer Interest** (decay/recovery rate) — needed only if the player rejects both proposals in Section 4; a single placeholder constant is sufficient for the slice.
-- **Court Outcomes** (penalty range for the one case type) — needed for Section 7; a single placeholder range is sufficient for the slice.
+- **Developer Interest** (decay/recovery rate) — needed only if the player rejects both proposals in Section 4; a single placeholder constant is sufficient for the slice. See [10 — Vertical Slice Data Defaults](10_Vertical_Slice_Data_Defaults.md).
+- **Court Outcomes** (penalty range for the one case type) — needed for Section 7; a single placeholder range is sufficient for the slice. See [10 — Vertical Slice Data Defaults](10_Vertical_Slice_Data_Defaults.md).
+
+Report 10 also supplies the concrete department roster and region-preset data needed to begin Section 14's Step 1.
 
 Education, citizen risk, media reach at scale, and catastrophic-failure weighting are not required to be tuned for the slice per Section 11.
 

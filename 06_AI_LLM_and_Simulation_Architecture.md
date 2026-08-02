@@ -231,7 +231,7 @@ Preliminary assessment:
 - **Godot 4 C#** remains a strong option for a leaner, open-source project.
 - **Unreal** is possible but may add complexity beyond the project's current needs.
 
-No final engine decision has been made.
+**Decision: Unity 6 with C# is the selected engine for City Authority.** Godot 4 C# remains the documented fallback rationale above in case Unity-specific constraints force a reconsideration, but implementation work should proceed on Unity 6.
 
 ## 14. Technical Design Requirements
 

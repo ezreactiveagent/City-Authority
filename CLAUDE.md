@@ -20,6 +20,7 @@ The game: a sandbox city-management simulation where the player is the **City Ma
 - `07_Open_Decisions_and_Expansion_Backlog.md` — deferred features, systems that still need numeric tuning, suggested next deep-dive reports, design guardrails.
 - `08_Vertical_Slice_Specification.md` — **the current build target**: the minimum playable city (one region, one Mayor, five departments, one scripted emergency, one court case, one newspaper, one developer dispute, an accountability report). Read this first if implementation work starts.
 - `09_Service_Coverage_and_Response_Model.md` — first-pass numeric defaults (travel-time bands, coverage-state resolution, response-time multipliers) needed to make the vertical slice's emergency system actually implementable.
+- `10_Vertical_Slice_Data_Defaults.md` — fixes the remaining vertical-slice numeric gaps (developer interest penalty/recovery, court penalty range for the emergency condemnation dispute) and supplies the concrete department roster and region-preset data needed to start building.
 
 Reports are numbered and meant to be read roughly in order; `00_Project_Index.md §Suggested Review Order` gives targeted entry points per topic.
 
@@ -55,7 +56,7 @@ If asked to design or implement any AI-touching system, preserve this boundary �
 ## Current status / what to work on
 
 - **No code exists yet.** The project is pre-implementation.
-- Engine is undecided: Report 06 §13 leans toward Unity 6 (C#) with Godot 4 (C#) as a strong open-source alternative; no final decision made.
-- The active build target is the **vertical slice** (Report 08) — the smallest playable loop that proves the core identity (capacity bottleneck → delayed consequence → accountability record → explainable outcome). Its suggested build order deliberately builds accountability logging (step 3) *before* the emergency/coverage system (step 2 is designed, but logging infra should land early) since every later system writes to it.
+- **Engine: Unity 6 with C#**, decided (Report 06 §13). Godot 4 C# remains documented as the fallback rationale if Unity-specific constraints force a reconsideration, but implementation should target Unity 6.
+- The active build target is the **vertical slice** (Report 08) — the smallest playable loop that proves the core identity (capacity bottleneck → delayed consequence → accountability record → explainable outcome). Its suggested build order deliberately builds accountability logging (step 3) *before* the emergency/coverage system (step 2 is designed, but logging infra should land early) since every later system writes to it. Report 10 supplies the concrete numbers and data (department roster, region preset, developer interest, court penalty range) needed to actually start Step 1.
 - Full citizen-level simulation (Report 04), procedural parcel/road generation, and most numeric tuning in Report 07 §4 are explicitly deferred past the slice — don't scope-creep implementation work into them unless asked.
 - Repo work in this environment (`ezreactiveagent/City-Authority`) has historically been drafted in a sandboxed session without push access, then applied/pushed from a machine with GitHub Desktop credentials. Check push access before assuming a commit will reach `origin`.
