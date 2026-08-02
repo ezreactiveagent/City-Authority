@@ -81,7 +81,7 @@ No Emergency Management Department, Incident Commander, dispatch/coordination st
 
 ## 11. Explicitly Out of Scope for the Slice
 
-- Individual citizen-level simulation ([04](04_Citizens_Education_Employment_and_Neighborhood_Risk.md)). The slice can use a small fixed or placeholder population; the per-citizen risk/education/employment model is the single largest technical risk in the whole design and should be prototyped separately, not inside the slice.
+- Individual citizen-level simulation ([04](04_Citizens_Education_Employment_and_Neighborhood_Risk.md)). The slice can use a small fixed or placeholder population; the per-citizen risk/education/employment model is the single largest technical risk in the whole design and should be prototyped separately, not inside the slice. A narrow exception — a handful of hand-authored named citizens with no simulation loop, tied directly to the condemned structure and the coverage-tradeoff district — is scoped in by [11 §4](11_Vertical_Slice_Implementation_Approach.md#4-minimal-named-citizen-set-reopens-part-of-11); the full model here still is not.
 - Procedural parcel/road generation ([02 §9](02_Land_Development_Housing_and_Infrastructure.md), [06 §12](06_AI_LLM_and_Simulation_Architecture.md)). The slice's one parcel can be hand-placed.
 - Reputation subscore breakdown ([05 §1](05_Reputation_Media_Politics_and_Accountability.md)) beyond whatever single number the report needs.
 - Incentive packages, capital requests, judge/manager rosters, multiple regions, City Council approval tier, and everything listed as Deferred in [07 §3](07_Open_Decisions_and_Expansion_Backlog.md).
@@ -111,6 +111,8 @@ The slice is complete when a single playthrough can, without developer intervent
 7. Reach a pass/fail scenario end state and generate an accountability report covering all of the above.
 8. Reload a save made mid-scenario and confirm the court ruling and any other stored AI decisions do not change.
 
+**Item 8 is deferred to a second pass for the first working build; see [11 §5](11_Vertical_Slice_Implementation_Approach.md#5-definition-of-done-revised-amends-13).**
+
 ## 14. Suggested Build Order
 
 1. Fixed region + department data (Sections 3, 5) — no gameplay yet, just data existing.
@@ -122,3 +124,5 @@ The slice is complete when a single playthrough can, without developer intervent
 7. Final report generation (Section 10) — assembled from the accountability log built in step 3.
 
 Step 3 before step 2 is a deliberate reversal of narrative order: the accountability record is infrastructure that every other slice system depends on, and retrofitting it after the fact risks silently missing the exact "ignored vs. acknowledged vs. acted on" distinction the whole design identity depends on.
+
+This order is a reasonable sequence for standing up each subsystem, but the subsystems should be wired together as a branching decision-flow graph feeding the shared accountability log, not as a hardcoded call chain — see [11 §3](11_Vertical_Slice_Implementation_Approach.md#3-deferred-llm-integration-amends-69) and [11 §2](11_Vertical_Slice_Implementation_Approach.md#2-decision-flow-structure-amends-14). Steps 4 (court case) and 6 (newspaper) should use the deterministic template stubs in [11 §3](11_Vertical_Slice_Implementation_Approach.md#3-deferred-llm-integration-amends-69) for the first pass rather than live LLM calls.

@@ -203,6 +203,8 @@ Define:
 - Risk
 - Education and employment
 
+**A narrow, hand-authored named-citizen set (no simulation loop) is scoped into the vertical slice in [11 §4](11_Vertical_Slice_Implementation_Approach.md#4-minimal-named-citizen-set-reopens-part-of-11). The full per-citizen simulation described here remains open.**
+
 ### F. Media and Reputation Model
 
 Define:

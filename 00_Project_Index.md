@@ -48,6 +48,10 @@ Proposes first-pass numeric defaults for travel-time bands, coverage-state resol
 
 Fixes the remaining vertical-slice numeric gaps — developer interest penalty/recovery and the court penalty range for the emergency condemnation dispute — and supplies the concrete department roster and region-preset data needed to start building.
 
+### [11 — Vertical Slice Implementation Approach](11_Vertical_Slice_Implementation_Approach.md)
+
+Amends how the slice gets built for a solo, casual-pace first pass: reframes the build order as a branching decision-flow graph feeding a shared accountability log, defers LLM calls in favor of the deterministic template fallbacks already described in Report 06, reopens a narrow hand-authored named-citizen set, and splits the Definition of Done into a first-pass tier and a deferred save/load-reproducibility tier.
+
 ## Current Design Pillars
 
 1. **The player manages rather than directly controls everything.**
@@ -70,3 +74,4 @@ For targeted development:
 - Start with **Report 07** before resuming the one-question design process.
 - Start with **Report 08** to see what should actually get built first.
 - Start with **Report 10** for the concrete numbers and data needed to begin Report 08's build order.
+- Start with **Report 11** for how to actually sequence and build the slice as a solo, casual-pace first pass.
